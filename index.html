@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = 'iPhone     x' //包含两个以上空格
+      let searcStr = '  ' //两个空格
+      let newStr = ''
+      function handleStr(oriStr,searcStr) {
+        if (oriStr.includes(searcStr)) {
+          debugger
+          console.log('-----');
+          // 进来说明最少包含两个空格
+          // 两个空格换成一个空格
+          newStr = oriStr.replace(/  /g, '*')
+          handleStr(newStr,searcStr)
+        }
+      }
+
+      console.log(handleStr(str,searcStr));
+
+    
+      // 空调孔 - 主卧孔内外、客卧、次卧
+      // 下水管道 - 阳台洗衣机下水、主卫下水、客卫下水、厨房下水
+      // 地漏处 - 易拉盖
+      // 接线处 - 入户电表盒、地暖出口处、多媒体盒
+
+
+
+    </script>
+  </body>
+</html>
